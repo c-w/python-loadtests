@@ -1,0 +1,37 @@
+swagger: '2.0'
+
+info:
+  title: Connexion test API.
+  version: '0.1'
+
+basePath: '/'
+
+paths:
+  '/test/{ident}':
+    get:
+      operationId: test
+      summary: Test endpoint.
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/ident'
+      responses:
+        200:
+          description: Test response.
+          schema:
+            $ref: '#/definitions/response'
+
+parameters:
+  ident:
+    name: ident
+    in: path
+    required: true
+    description: Identifier to fetch.
+    type: string
+
+definitions:
+  response:
+    properties:
+      value:
+        description: Fetched value.
+        type: string

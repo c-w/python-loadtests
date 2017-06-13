@@ -1,0 +1,2 @@
+azure-storage==0.34.2
+sanic==0.5.4
