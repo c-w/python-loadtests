@@ -9,8 +9,8 @@ azure_table_name="${3:-pythonloadtests}"
 runas="${4:-$(whoami)}"
 
 # install python
-sudo apt-get install -y python3.5 python3.5-venv python3.5-dev python3.5-pip
-python3.5 -m venv flask_venv
+sudo apt-get install -y python3 python3-venv python3-dev python3-pip
+python3 -m venv flask_venv
 flask_venv/bin/pip install --upgrade pip wheel
 
 # install app
