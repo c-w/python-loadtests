@@ -21,9 +21,9 @@ python3 -m venv sanic_venv
 sanic_venv/bin/pip install --upgrade pip wheel
 
 # install app
-curl -O https://raw.githubusercontent.com/c-w/python-loadtests/sanic_authbind/app.py
-curl -O https://raw.githubusercontent.com/c-w/python-loadtests/shared/app_business_logic.py
-curl -O https://raw.githubusercontent.com/c-w/python-loadtests/sanic_authbind/requirements.txt
+curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/sanic_authbind/app.py
+curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/shared/app_business_logic.py
+curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/sanic_authbind/requirements.txt
 sanic_venv/bin/pip install -r requirements.txt
 
 # auto-start app

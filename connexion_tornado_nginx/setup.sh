@@ -15,10 +15,10 @@ python3 -m venv connexion_venv
 connexion_venv/bin/pip install --upgrade pip wheel
 
 # install app
-curl -O https://raw.githubusercontent.com/c-w/python-loadtests/connexion_tornado_nginx/app.py
-curl -O https://raw.githubusercontent.com/c-w/python-loadtests/shared/app_business_logic.py
-curl -O https://raw.githubusercontent.com/c-w/python-loadtests/connexion_tornado_nginx/api.yaml
-curl -O https://raw.githubusercontent.com/c-w/python-loadtests/connexion_tornado_nginx/requirements.txt
+curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/connexion_tornado_nginx/app.py
+curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/shared/app_business_logic.py
+curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/connexion_tornado_nginx/api.yaml
+curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/connexion_tornado_nginx/requirements.txt
 connexion_venv/bin/pip install -r requirements.txt
 
 # setup nginx

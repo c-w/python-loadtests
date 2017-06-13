@@ -15,9 +15,9 @@ python3 -m venv flask_venv
 flask_venv/bin/pip install --upgrade pip wheel
 
 # install app
-curl -O https://raw.githubusercontent.com/c-w/python-loadtests/flask_gunicorn_nginx/app.py
-curl -O https://raw.githubusercontent.com/c-w/python-loadtests/shared/app_business_logic.py
-curl -O https://raw.githubusercontent.com/c-w/python-loadtests/flask_gunicorn_nginx/requirements.txt
+curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/flask_gunicorn_nginx/app.py
+curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/shared/app_business_logic.py
+curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/flask_gunicorn_nginx/requirements.txt
 flask_venv/bin/pip install -r requirements.txt
 
 # setup nginx
