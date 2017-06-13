@@ -63,7 +63,7 @@ startretries=3
 stderr_logfile=/tmp/connexion_app_8080.err.log
 stdout_logfile=/tmp/connexion_app_8080.out.log
 user=${runas}
-environment=AZURE_ACCOUNT_NAME=${azure_account_name},AZURE_ACCOUNT_KEY=${azure_account_key},AZURE_TABLE_NAME=${azure_table_name}
+environment=AZURE_ACCOUNT_NAME="${azure_account_name}",AZURE_ACCOUNT_KEY="${azure_account_key}",AZURE_TABLE_NAME="${azure_table_name}"
 EOF
 sudo tee /etc/supervisor/conf.d/connexion_app_8081.conf << EOF
 [program:connexion_app_8081]
