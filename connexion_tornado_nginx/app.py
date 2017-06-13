@@ -1,9 +1,13 @@
 from app_business_logic import fetch_value
 
 
-def test(ident):
+def network(ident):
     response = fetch_value(ident)
     return response
+
+
+def echo(ident):
+    return {'value': ident}
 
 
 if __name__ == '__main__':

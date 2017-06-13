@@ -7,9 +7,14 @@ from locust import task
 
 class WebsiteTasks(TaskSet):
     @task
-    def test(self):
+    def network(self):
         ident = randint(1, 1000000)
-        self.client.get('/test/%s' % ident, name='/test/[ident]')
+        self.client.get('/network/%s' % ident, name='/network/[ident]')
+
+    @task
+    def echo(self):
+        ident = randint(1, 1000000)
+        self.client.get('/echo/%s' % ident, name='/echo/[ident]')
 
 
 class WebsiteTest(HttpLocust):

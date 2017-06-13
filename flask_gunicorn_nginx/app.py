@@ -6,10 +6,15 @@ from app_business_logic import fetch_value
 app = Flask(__name__)
 
 
-@app.route('/test/<ident>')
-def test(ident):
+@app.route('/network/<ident>')
+def network(ident):
     response = fetch_value(ident)
     return jsonify(response)
+
+
+@app.route('/echo/<ident>')
+def echo(ident):
+    return jsonify({'value': ident})
 
 
 if __name__ == '__main__':

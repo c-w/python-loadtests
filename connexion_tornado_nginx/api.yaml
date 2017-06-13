@@ -7,9 +7,23 @@ info:
 basePath: '/'
 
 paths:
-  '/test/{ident}':
+  '/network/{ident}':
     get:
-      operationId: app.test
+      operationId: app.network
+      summary: Test endpoint.
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/ident'
+      responses:
+        200:
+          description: Test response.
+          schema:
+            $ref: '#/definitions/response'
+
+  '/echo/{ident}':
+    get:
+      operationId: app.echo
       summary: Test endpoint.
       produces:
         - application/json

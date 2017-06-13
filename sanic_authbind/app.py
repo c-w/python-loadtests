@@ -6,10 +6,15 @@ from app_business_logic import fetch_value
 app = Sanic(__name__, log_config=None)
 
 
-@app.route('/test/<ident>')
-async def test(request, ident):
+@app.route('/network/<ident>')
+async def network(request, ident):
     response = fetch_value(ident)
     return json(response)
+
+
+@app.route('/echo/<ident>')
+async def echo(request, ident):
+    return json({'value': ident})
 
 
 if __name__ == '__main__':
