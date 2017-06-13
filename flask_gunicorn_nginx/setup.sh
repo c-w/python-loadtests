@@ -21,7 +21,6 @@ curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/flask_guni
 flask_venv/bin/pip install -r requirements.txt
 
 # setup nginx
-touch flask_app.socket
 sudo apt-get install -y nginx
 sudo tee /etc/nginx/sites-available/flask_app << EOF
 server {
@@ -47,6 +46,7 @@ command=$(readlink -f flask_venv/bin/gunicorn) --workers=9 --bind="unix:$(readli
 autostart=true
 autorestart=true
 startretries=3
+directory=$(readlink -f .)
 stderr_logfile=/tmp/flask_app.err.log
 stdout_logfile=/tmp/flask_app.out.log
 user=${runas}
