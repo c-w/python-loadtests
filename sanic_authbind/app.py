@@ -3,7 +3,7 @@ from sanic.response import json
 
 from app_business_logic import fetch_value
 
-app = Sanic(__name__)
+app = Sanic(__name__, log_config=None)
 
 
 @app.route('/test/<ident>')
@@ -22,4 +22,4 @@ if __name__ == '__main__':
     parser.add_argument('--workers', default=cpu_count(), type=int)
     args = parser.parse_args()
 
-    app.run(host=args.host, port=args.port, workers=args.workers)
+    app.run(host=args.host, port=args.port, workers=args.workers, debug=False, log_config=None)
