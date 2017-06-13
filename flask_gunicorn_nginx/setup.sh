@@ -50,7 +50,7 @@ startretries=3
 stderr_logfile=/tmp/flask_app.err.log
 stdout_logfile=/tmp/flask_app.out.log
 user=${runas}
-environment=AZURE_ACCOUNT_NAME=${azure_account_name},AZURE_ACCOUNT_KEY=${azure_account_key},AZURE_TABLE_NAME=${azure_table_name}
+environment=AZURE_ACCOUNT_NAME="${azure_account_name}",AZURE_ACCOUNT_KEY="${azure_account_key}",AZURE_TABLE_NAME="${azure_table_name}"
 EOF
 sudo supervisorctl reread
 sudo supervisorctl update

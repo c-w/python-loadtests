@@ -74,7 +74,7 @@ startretries=3
 stderr_logfile=/tmp/connexion_app_8081.err.log
 stdout_logfile=/tmp/connexion_app_8081.out.log
 user=${runas}
-environment=AZURE_ACCOUNT_NAME=${azure_account_name},AZURE_ACCOUNT_KEY=${azure_account_key},AZURE_TABLE_NAME=${azure_table_name}
+environment=AZURE_ACCOUNT_NAME="${azure_account_name}",AZURE_ACCOUNT_KEY="${azure_account_key}",AZURE_TABLE_NAME="${azure_table_name}"
 EOF
 sudo tee /etc/supervisor/conf.d/connexion_app_8082.conf << EOF
 [program:connexion_app_8082]
@@ -85,7 +85,7 @@ startretries=3
 stderr_logfile=/tmp/connexion_app_8082.err.log
 stdout_logfile=/tmp/connexion_app_8082.out.log
 user=${runas}
-environment=AZURE_ACCOUNT_NAME=${azure_account_name},AZURE_ACCOUNT_KEY=${azure_account_key},AZURE_TABLE_NAME=${azure_table_name}
+environment=AZURE_ACCOUNT_NAME="${azure_account_name}",AZURE_ACCOUNT_KEY="${azure_account_key}",AZURE_TABLE_NAME="${azure_table_name}"
 EOF
 sudo tee /etc/supervisor/conf.d/connexion_app_8083.conf << EOF
 [program:connexion_app_8083]
@@ -96,7 +96,7 @@ startretries=3
 stderr_logfile=/tmp/connexion_app_8083.err.log
 stdout_logfile=/tmp/connexion_app_8083.out.log
 user=${runas}
-environment=AZURE_ACCOUNT_NAME=${azure_account_name},AZURE_ACCOUNT_KEY=${azure_account_key},AZURE_TABLE_NAME=${azure_table_name}
+environment=AZURE_ACCOUNT_NAME="${azure_account_name}",AZURE_ACCOUNT_KEY="${azure_account_key}",AZURE_TABLE_NAME="${azure_table_name}"
 EOF
 sudo supervisorctl reread
 sudo supervisorctl update
