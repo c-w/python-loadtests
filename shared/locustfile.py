@@ -12,7 +12,19 @@ class WebsiteTasks(TaskSet):
         self.client.get('/test/%s' % ident, name='/test/[ident]')
 
 
-class WebsiteUser(HttpLocust):
+class WebsiteTest(HttpLocust):
     task_set = WebsiteTasks
     min_wait = 500
     max_wait = 2000
+
+
+class SanicTest(WebsiteTest):
+    host = 'http://52.166.78.63'
+
+
+class FlaskTest(WebsiteTest):
+    host = 'http://52.233.169.18'
+
+
+class ConnexionTest(WebsiteTest):
+    host = 'http://52.166.122.193'
