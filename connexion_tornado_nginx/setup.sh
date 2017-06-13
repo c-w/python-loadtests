@@ -48,7 +48,7 @@ server {
 }
 EOF
 sudo ln -s /etc/nginx/sites-available/connexion_app /etc/nginx/sites-enabled
-sudo rm /etc/ngix/sites-available/default
+sudo rm /etc/ngix/sites-enabled/default
 sudo service nginx start
 
 # auto-start app
