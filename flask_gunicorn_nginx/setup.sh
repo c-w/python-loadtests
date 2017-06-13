@@ -35,7 +35,7 @@ server {
 EOF
 sudo ln -fs /etc/nginx/sites-available/flask_app /etc/nginx/sites-enabled
 sudo rm -f /etc/ngix/sites-enabled/default
-sudo service nginx start
+sudo service nginx restart
 
 # auto-start app
 sudo apt-get install -y supervisor
