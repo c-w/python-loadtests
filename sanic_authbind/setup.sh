@@ -16,7 +16,7 @@ sudo chown "${runas}:${runas}" /etc/authbind/byport/80
 sudo chmod 755 /etc/authbind/byport/80
 
 # install python
-sudo apt-get install -y python3 python3-venv python3-dev python3-pip
+sudo apt-get install -y python3 python3-venv python3-dev python3-pip libssl-dev
 python3 -m venv sanic_venv
 sanic_venv/bin/pip install --upgrade pip wheel
 
