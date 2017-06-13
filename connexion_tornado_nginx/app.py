@@ -21,6 +21,6 @@ if __name__ == '__main__':
     parser.add_argument('--api', default=abspath(join(dirname(__file__), 'api.yaml')))
     args = parser.parse_args()
 
-    app = App(__name__, host=args.host, port=args.port, server=args.server)
+    app = App(__name__)
     app.add_api(args.api)
-    app.run()
+    app.run(host=args.host, port=args.port, server=args.server)

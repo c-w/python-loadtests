@@ -9,7 +9,7 @@ basePath: '/'
 paths:
   '/test/{ident}':
     get:
-      operationId: test
+      operationId: app.test
       summary: Test endpoint.
       produces:
         - application/json
