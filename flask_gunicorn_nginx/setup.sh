@@ -30,7 +30,7 @@ server {
   
   location / {
     include proxy_params;
-    proxy_pass http://unix:$(readlink -f flask_app.socket)
+    proxy_pass http://unix:$(readlink -f flask_app.socket);
   }
 }
 EOF
