@@ -56,7 +56,7 @@ sudo apt-get install -y supervisor
 sudo service supervisor start
 sudo tee /etc/supervisor/conf.d/connexion_app_8080.conf << EOF
 [program:connexion_app_8080]
-command=$(readlink -f connexion_venv/bin/python) $(readlink -f app.py) --port 8080
+command="$(readlink -f .)/connexion_venv/bin/python" $(readlink -f app.py) --port 8080
 autostart=true
 autorestart=true
 startretries=3
@@ -67,7 +67,7 @@ environment=AZURE_ACCOUNT_NAME="${azure_account_name}",AZURE_ACCOUNT_KEY="${azur
 EOF
 sudo tee /etc/supervisor/conf.d/connexion_app_8081.conf << EOF
 [program:connexion_app_8081]
-command=$(readlink -f connexion_venv/bin/python) $(readlink -f app.py) --port 8081
+command="$(readlink -f .)/connexion_venv/bin/python" $(readlink -f app.py) --port 8081
 autostart=true
 autorestart=true
 startretries=3
@@ -78,7 +78,7 @@ environment=AZURE_ACCOUNT_NAME="${azure_account_name}",AZURE_ACCOUNT_KEY="${azur
 EOF
 sudo tee /etc/supervisor/conf.d/connexion_app_8082.conf << EOF
 [program:connexion_app_8082]
-command=$(readlink -f connexion_venv/bin/python) $(readlink -f app.py) --port 8082
+command="$(readlink -f .)/connexion_venv/bin/python" $(readlink -f app.py) --port 8082
 autostart=true
 autorestart=true
 startretries=3
@@ -89,7 +89,7 @@ environment=AZURE_ACCOUNT_NAME="${azure_account_name}",AZURE_ACCOUNT_KEY="${azur
 EOF
 sudo tee /etc/supervisor/conf.d/connexion_app_8083.conf << EOF
 [program:connexion_app_8083]
-command=$(readlink -f connexion_venv/bin/python) $(readlink -f app.py) --port 8083
+command="$(readlink -f .)/connexion_venv/bin/python" $(readlink -f app.py) --port 8083
 autostart=true
 autorestart=true
 startretries=3
