@@ -7,6 +7,7 @@ azure_account_name="$1"
 azure_account_key="$2"
 azure_table_name="${3:-pythonloadtests}"
 runas="${4:-$(whoami)}"
+sudo apt-get update
 
 # install python
 sudo apt-get install -y python3 python3-venv python3-dev python3-pip
