@@ -31,7 +31,7 @@ sudo apt-get install -y supervisor
 sudo service supervisor start
 sudo tee /etc/supervisor/conf.d/sanic_app.conf << EOF
 [program:sanic_app]
-command=/usr/bin/authbind $(readlink -f sanic_venv/bin/python) $(readlink -f app.py)
+command=/usr/bin/authbind "$(readlink -f .)/sanic_venv/bin/python" $(readlink -f app.py)
 autostart=true
 autorestart=true
 startretries=3
