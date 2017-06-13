@@ -1,2 +1,2 @@
 azure-storage==0.34.2
-locustio==0.7.5
+-e git://github.com/locustio/locust.git@master#egg=locustio
