@@ -26,6 +26,14 @@ curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/django_mod
 curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/shared/app_business_logic.py
 django_venv/bin/pip install -r requirements.txt
 
+tee env.json << EOF
+{
+  "AZURE_ACCOUNT_NAME": "${azure_account_name}",
+  "AZURE_ACCOUNT_KEY": "${azure_account_key}",
+  "AZURE_TABLE_NAME": "${azure_table_name}"
+}
+EOF
+
 # setup apache
 sudo apt-get install -y apache2 libapache2-mod-wsgi-py3
 sudo tee /etc/apache2/sites-available/000-default.conf << EOF
@@ -39,9 +47,6 @@ sudo tee /etc/apache2/sites-available/000-default.conf << EOF
       Require all granted
     </Files>
   </Directory>
-  SetEnv AZURE_ACCOUNT_NAME ${azure_account_name}
-  SetEnv AZURE_ACCOUNT_KEY ${azure_account_key}
-  SetEnv AZURE_TABLE_NAME ${azure_table_name}
   WSGIDaemonProcess django_app python-path=$(readlink -f django_modwsgi_apache) python-home=$(readlink -f django_venv)
   WSGIProcessGroup django_app
   WSGIApplicationGroup %{GLOBAL}
