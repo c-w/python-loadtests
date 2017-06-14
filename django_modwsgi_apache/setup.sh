@@ -15,7 +15,7 @@ django_venv/bin/pip install --upgrade pip wheel
 
 # install app
 curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/django_modwsgi_apache/manage.py
-mkdir django_modwsgi_apache; cd django_modwsgi_apache
+mkdir -p django_modwsgi_apache; cd django_modwsgi_apache
 curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/django_modwsgi_apache/django_modwsgi_apache/__init__.py
 curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/django_modwsgi_apache/django_modwsgi_apache/settings.py
 curl -O https://raw.githubusercontent.com/c-w/python-loadtests/master/django_modwsgi_apache/django_modwsgi_apache/urls.py
