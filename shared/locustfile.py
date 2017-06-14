@@ -33,3 +33,7 @@ class FlaskTest(WebsiteTest):
 
 class ConnexionTest(WebsiteTest):
     host = 'http://52.166.122.193'
+
+
+class DjangoTest(WebsiteTest):
+    host = 'http://52.232.102.239'
