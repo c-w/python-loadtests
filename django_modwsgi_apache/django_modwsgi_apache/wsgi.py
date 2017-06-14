@@ -7,10 +7,16 @@ For more information on this file, see
 https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/
 """
 
-import os
-
+import sys
+from os import environ
+from os.path import abspath
+from os.path import dirname
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_modwsgi_apache.settings")
+path = dirname(dirname(abspath(__file__)))
+if path not in sys.path:
+    sys.path.append(path)
+
+environ.setdefault("DJANGO_SETTINGS_MODULE", "django_modwsgi_apache.settings")
 
 application = get_wsgi_application()
