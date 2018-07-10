@@ -8,6 +8,8 @@ This repository contains sample apps and server setup scripts for a variety of P
 - Django (behind Apache)
 - Connexion (behind Tornado and Nginx)
 
+There is also a companion `talk <https://www.youtube.com/watch?v=-ej6lf9RfBQ#t=20m40s>`_ for this repository that I gave at the `Code & Coffee Meetup <https://www.meetup.com/codecoffeeyvr/>`_ in Vancouver.
+
 For each of these stacks, we then run a load-test that consists of a network-bound task and a framework-bound task.
 
 Authbind + Sanic is the easiest stack to set up and is competitive performance-wise with more complicated stacks.
